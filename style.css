@@ -5,16 +5,3 @@ body {
     background-size: cover;
     position: relative;
 }
-
-/* semi-transparent overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);  /* darken to make content readable */
-    z-index: -1;
-    backdrop-filter: blur(2px);     /* smooth background */
-}
