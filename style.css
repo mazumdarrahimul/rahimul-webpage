@@ -14,53 +14,66 @@
 @import url(http://fonts.googleapis.com/css?family=Maven+Pro:400);
 -------------------------------------------------- @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
 */
-    /**
-    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
-    * http://cssreset.com
-    */
-    html, body, div, span, applet, object, iframe,
-    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
-    del, dfn, em, img, ins, kbd, q, s, samp,
-    small, strike, strong, sub, sup, tt, var,
-    b, u, i, center,
-    dl, dt, dd, ol, ul, li,
-    fieldset, form, label, legend,
-    table, caption, tbody, tfoot, thead, tr, th, td,
-    article, aside, canvas, details, embed,
-    figure, figcaption, footer, header, hgroup,
-    menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    }
-    /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure,
-    footer, header, hgroup, menu, nav, section {
-    display: block;
-    }
-    body {
-    line-height: 1;
-    }
-    ol, ul {
-    list-style: none;
-    }
-    blockquote, q {
-    quotes: none;
-    }
-    blockquote:before, blockquote:after,
-    q:before, q:after {
-    content: '';
-    content: none;
-    }
-    table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    }
+
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+
+	/* ⭐ ADDED BY YOU — background image */
+	background: url("background.jpg") no-repeat center center fixed;
+	background-size: cover;
+
+	font: 400 100%/1.625 "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 13px;
+	color: #3B3B3B;
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;
@@ -69,32 +82,26 @@
 	clear: both;
 	height: 0;
 }
-.clearfix
-{ display: inline-table; }
+.clearfix { display: inline-table; }
 /* Hides from IE-mac \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }
 /* End hide from IE-mac */ 
 
-:-moz-placeholder{
+:-moz-placeholder {
 	color:#aaa !important;
 	font-style:italic;
 	line-height:20px;
 }
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
 	color:#aaa !important;
 	font-style:italic;
 	line-height:20px;
 }
-body {
-    background-image: url("background.jpg");
-    background-size: cover;        /* Make it fill the page */
-    background-repeat: no-repeat;  /* Prevent tiling */
-    background-attachment: fixed;  /* Keep image fixed while scrolling */
-    background-position: center;   /* Center the image */
-}
-.fl{float: left;}
-.fr{float: right;}
+
+.fl { float: left; }
+.fr { float: right; }
+
 h1 {
 	font-weight:400;
 	line-height:1.1em;
@@ -108,6 +115,7 @@ h1 {
 	color: rgb(0, 170, 238);
 	text-decoration: none;
 }
+
 h2 {
 	font-size:16px;
 	color:#111;
@@ -116,11 +124,13 @@ h2 {
 	background:#eee;
 	font-weight:700;
 }
-h3{
+
+h3 {
 	margin:0 0 10px 0;
 	color:#111;
 }
-blockquote{
+
+blockquote {
 	background:#eee;
 	padding:15px;
 	margin:30px auto;
@@ -129,67 +139,68 @@ blockquote{
 	font-style:italic;
 	color:#000;
 	position:relative;
-
 }
-blockquote p{
+blockquote p {
 	margin:0;
 	padding:0;
 }
-img{
-	border:none;
-}
+
+img { border:none; }
+
 ul.left {}
- 
-ul.right {
-text-align: right ;
-}
+ul.right { text-align: right; }
+
 a:link, a:visited {
 	text-decoration:none;
 	color:#0077BB;
 }
-a:hover, a:active{
+a:hover, a:active {
 	color:#0099cc;
 	text-decoration:underline;
 }
+
 button::-moz-focus-inner {
-    border:0;
-    padding:0;
+	border:0;
+	padding:0;
 }
-form, fieldset{
+
+form, fieldset {
 	padding:0;
 	margin:0;
 	border:none;
 }
-.header{
+
+.header {
 	background-color: #fff;
 	height: 10%;
 }
-.header-wrapper{
+.header-wrapper {
 	width: 998px;
 	margin: 0 auto;
 	background-color: #fff;
 }
-.logo{width:200px;margin-top: 10px;}
-.search{
-	margin-top: 10px;
-}
-.nav{
+.logo { width:200px; margin-top: 10px; }
+.search { margin-top: 10px; }
+
+.nav {
 	height: 10%;
 	background-color: #00AEEC;
 }
-.nav-wrapper{
-	
+.nav-wrapper {
 	margin: 0 auto;
 	width: 998px;
 }
-.nav ul,.header ul,.sidebar ul{
+
+.nav ul, .header ul, .sidebar ul {
 	list-style: none;
-	list-style-type: none ;
+	list-style-type: none;
 }
-.nav ul li,.header ul li{
-	display: inline ;
-	padding: 0px 10px 0px 10px ;
+
+.nav ul li, .header ul li {
+	display: inline;
+	padding: 0px 10px 0px 10px;
 }
-.nav ul li{
+
+.nav ul li {
 	padding: 0 20px;
 }
