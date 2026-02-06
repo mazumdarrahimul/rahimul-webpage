@@ -80,36 +80,25 @@
             color: #1f6f63;
         }
 
-		.footer-band {
+ .footer-band {
     background-color: #5b8d4a;
     padding: 15px 0;
-    width: 100%;
+    margin-left: 260px;             /* SAME WIDTH AS YOUR LEFT SIDEBAR */
+    width: calc(100% - 260px);      /* rest of the page width */
   }
 
   .footer-content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-
-  .footer-content p {
+    padding: 0 20px;
     color: white;
-    margin: 0;
-    font-size: 16px;
   }
 
-  .social-icons a img {
-    width: 28px;
+  .footer-content a {
     margin-left: 20px;
-    vertical-align: middle;
-    transition: opacity 0.3s ease;
-  }
-
-  .social-icons a:hover img {
-    opacity: 0.7;
+    color: white;
+    text-decoration: none;
   }
     </style>
 </head>
@@ -593,4 +582,5 @@
 
 </body>
 </html>
+
 
