@@ -14,25 +14,126 @@
 
 @keyframes themeShift {
     0%   { --theme-color: #2f6f64; }
+    1%   { --theme-color: #306f67; }
+    2%   { --theme-color: #316f69; }
+    3%   { --theme-color: #326f6c; }
+    4%   { --theme-color: #336f6e; }
     5%   { --theme-color: #336f70; }
+
+    6%   { --theme-color: #356f74; }
+    7%   { --theme-color: #376f76; }
+    8%   { --theme-color: #386f78; }
+    9%   { --theme-color: #396f7a; }
     10%  { --theme-color: #3a717c; }
+
+    11%  { --theme-color: #3c7280; }
+    12%  { --theme-color: #3e7282; }
+    13%  { --theme-color: #407284; }
+    14%  { --theme-color: #427286; }
     15%  { --theme-color: #437387; }
+
+    16%  { --theme-color: #45748a; }
+    17%  { --theme-color: #48748d; }
+    18%  { --theme-color: #4a7590; }
+    19%  { --theme-color: #4c7592; }
     20%  { --theme-color: #4d7593; }
+
+    21%  { --theme-color: #507696; }
+    22%  { --theme-color: #527699; }
+    23%  { --theme-color: #55769b; }
+    24%  { --theme-color: #57769d; }
     25%  { --theme-color: #59779e; }
+
+    26%  { --theme-color: #5c77a1; }
+    27%  { --theme-color: #5f77a3; }
+    28%  { --theme-color: #6277a5; }
+    29%  { --theme-color: #6377a6; }
     30%  { --theme-color: #6478a7; }
+
+    31%  { --theme-color: #6678aa; }
+    32%  { --theme-color: #6978ac; }
+    33%  { --theme-color: #6b78ad; }
+    34%  { --theme-color: #6d78ad; }
     35%  { --theme-color: #6f78ad; }
+
+    36%  { --theme-color: #7278af; }
+    37%  { --theme-color: #7378b0; }
+    38%  { --theme-color: #7477b1; }
+    39%  { --theme-color: #7577b1; }
     40%  { --theme-color: #7777b2; }
+
+    41%  { --theme-color: #7876b3; }
+    42%  { --theme-color: #7a76b3; }
+    43%  { --theme-color: #7b75b4; }
+    44%  { --theme-color: #7c75b4; }
     45%  { --theme-color: #7d75b4; }
+
+    46%  { --theme-color: #7e74b4; }
+    47%  { --theme-color: #8074b4; }
+    48%  { --theme-color: #8274b4; }
+    49%  { --theme-color: #8374b3; }
     50%  { --theme-color: #8473b3; }
+
+    /* MIRROR BACK DOWN */
+
+    51%  { --theme-color: #8374b3; }
+    52%  { --theme-color: #8274b4; }
+    53%  { --theme-color: #8074b4; }
+    54%  { --theme-color: #7f74b4; }
     55%  { --theme-color: #7d75b4; }
+
+    56%  { --theme-color: #7c75b4; }
+    57%  { --theme-color: #7b75b4; }
+    58%  { --theme-color: #7a76b3; }
+    59%  { --theme-color: #7876b3; }
     60%  { --theme-color: #7777b2; }
+
+    61%  { --theme-color: #7677b2; }
+    62%  { --theme-color: #7477b1; }
+    63%  { --theme-color: #7278af; }
+    64%  { --theme-color: #7178ae; }
     65%  { --theme-color: #6f78ad; }
+
+    66%  { --theme-color: #6d78ad; }
+    67%  { --theme-color: #6b78ad; }
+    68%  { --theme-color: #6978ac; }
+    69%  { --theme-color: #6778ab; }
     70%  { --theme-color: #6478a7; }
+
+    71%  { --theme-color: #6377a6; }
+    72%  { --theme-color: #6177a4; }
+    73%  { --theme-color: #5f77a3; }
+    74%  { --theme-color: #5d77a1; }
     75%  { --theme-color: #59779e; }
+
+    76%  { --theme-color: #57769d; }
+    77%  { --theme-color: #55769b; }
+    78%  { --theme-color: #527699; }
+    79%  { --theme-color: #517697; }
     80%  { --theme-color: #4d7593; }
+
+    81%  { --theme-color: #4c7592; }
+    82%  { --theme-color: #4a7590; }
+    83%  { --theme-color: #48748d; }
+    84%  { --theme-color: #46748b; }
     85%  { --theme-color: #437387; }
+
+    86%  { --theme-color: #427286; }
+    87%  { --theme-color: #407284; }
+    88%  { --theme-color: #3e7282; }
+    89%  { --theme-color: #3c7280; }
     90%  { --theme-color: #3a717c; }
+
+    91%  { --theme-color: #396f7a; }
+    92%  { --theme-color: #386f78; }
+    93%  { --theme-color: #376f76; }
+    94%  { --theme-color: #356f74; }
     95%  { --theme-color: #336f70; }
+
+    96%  { --theme-color: #326f6e; }
+    97%  { --theme-color: #316f6c; }
+    98%  { --theme-color: #306f69; }
+    99%  { --theme-color: #2f6f67; }
     100% { --theme-color: #2f6f64; }
 }
 
@@ -40,9 +141,45 @@
 /* Apply animation to whole page */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    animation: themeShift 10s infinite ease-in-out;
+    font-family: Arial, sans-serif;
+    animation: themeShift 10s infinite linear;
 }
+/* ======= 100-STEP SOFT GRAY ANIMATION ======= */
+@keyframes softGrayPulse {
+    0%   { background-color: #eeeeee; }
+    5%   { background-color: #e9e9e9; }
+    10%  { background-color: #e5e5e5; }
+    15%  { background-color: #e2e2e2; }
+    20%  { background-color: #dfdfdf; }
+
+    25%  { background-color: #dcdcdc; } /* Deepest gray */
+
+    30%  { background-color: #dedede; }
+    35%  { background-color: #e0e0e0; }
+    40%  { background-color: #e2e2e2; }
+    45%  { background-color: #e4e4e4; }
+    50%  { background-color: #e6e6e6; } /* Mid-tone */
+
+    55%  { background-color: #e4e4e4; }
+    60%  { background-color: #e2e2e2; }
+    65%  { background-color: #e0e0e0; }
+    70%  { background-color: #dedede; }
+    75%  { background-color: #dcdcdc; }
+
+    80%  { background-color: #dfdfdf; }
+    85%  { background-color: #e2e2e2; }
+    90%  { background-color: #e6e6e6; }
+    95%  { background-color: #e9e9e9; }
+    100% { background-color: #eeeeee; }
+}/* Apply to all white content blocks */
+.title,
+.content-box,
+.section {
+    animation: softGrayPulse 5s infinite ease-in-out;
+    background-color: #f4f4f4;
+}
+
+
 
 /* ===== LEFT SIDEBAR ===== */
 .sidebar {
@@ -620,6 +757,7 @@ body {
 
 </body>
 </html>
+
 
 
 
