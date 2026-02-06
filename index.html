@@ -4,103 +4,124 @@
 	<meta name="google-site-verification" content="WjPfUfgXafShDL8yGBW4TAMYMyy60XoN1kUpWx8AbvQ" />
     <title>Rahimul Islam Mazumdar</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
 
-        /* ===== LEFT SIDEBAR ===== */
-        .sidebar {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 230px;
-            height: 100%;
-            background-color: #1f1f1f;
-            color: white;
-        }
+/* ===== GLOBAL COLOR ANIMATION ===== */
+:root {
+    --theme-color: #2f6f64;
+    --theme-text-color: #ffffff;
+}
 
-        .sidebar h2 {
-            text-align: center;
-            padding: 20px;
-            margin: 0;
-            background-color: #111;
-        }
+@keyframes themeShift {
+    0%   { --theme-color: #2f6f64; }
+    25%  { --theme-color: #3a7f73; }
+    50%  { --theme-color: #4b9083; }
+    75%  { --theme-color: #3a7f73; }
+    100% { --theme-color: #2f6f64; }
+}
 
-        .sidebar a {
-            display: block;
-            padding: 12px 20px;
-            color: white;
-            text-decoration: none;
-        }
+/* Apply animation to whole page */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: themeShift 12s infinite ease-in-out;
+}
 
-        .sidebar a:hover {
-            background-color: #2f6f64;
-        }
+/* ===== LEFT SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 100%;
+    background-color: #1f1f1f;   /* Keep static */
+    color: white;
+}
 
-        /* ===== MAIN CONTENT ===== */
-        .main {
-            margin-left: 230px;
-            padding: 40px;
-            background-color: #2f5d56;
-            min-height: 100vh;
-        }
+.sidebar h2 {
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background-color: #111;
+}
 
-        .title {
-            text-align: center;
-            font-size: 40px;
-            color: #1f6f63;
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+}
 
-        .content-box {
-            background-color: white;
-            padding: 30px;
-            display: flex;
-            gap: 30px;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+/* Sidebar hover follows theme */
+.sidebar a:hover {
+    background-color: var(--theme-color);
+}
 
-        .content-box img {
-            width: 250px;
-            border-radius: 5px;
-        }
+/* ===== MAIN CONTENT ===== */
+.main {
+    margin-left: 230px;
+    padding: 40px;
+    background-color: var(--theme-color);
+    min-height: 100vh;
+}
 
-        .section {
-            background-color: white;
-            padding: 30px;
-            margin-bottom: 30px;
-        }
+.title {
+    text-align: center;
+    font-size: 40px;
+    color: var(--theme-color);
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+}
 
-        .section h2 {
-            color: #1f6f63;
-        }
+.content-box {
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
 
- .footer-band {
-    background-color: #5b8d4a;
+.content-box img {
+    width: 250px;
+    border-radius: 5px;
+}
+
+.section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: var(--theme-color);
+}
+
+/* ===== FOOTER ===== */
+.footer-band {
+    background-color: var(--theme-color);
     padding: 15px 0;
-    margin-left: 230px;             /* SAME WIDTH AS YOUR LEFT SIDEBAR */
-    width: calc(100% - 230px);      /* rest of the page width */
-  }
+    margin-left: 230px;               
+    width: calc(100% - 230px);
+}
 
-  .footer-content {
+.footer-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    color: white;
-  }
+    color: var(--theme-text-color);
+}
 
-  .footer-content a {
+.footer-content a {
     margin-left: 20px;
     color: white;
     text-decoration: none;
-  }
-    </style>
+}
+
+</style>
+
 </head>
 
 <body>
@@ -582,6 +603,7 @@
 
 </body>
 </html>
+
 
 
 
