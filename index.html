@@ -214,10 +214,11 @@ body {
 /* ===== MAIN CONTENT ===== */
 .main {
     margin-left: 230px;
-    padding: 40px;
+    padding: 40px 40px 40px 40px;
     background-color: var(--theme-color);
     min-height: 100vh;
 }
+
 
 .title {
     text-align: center;
@@ -273,7 +274,15 @@ body {
     color: white;
     text-decoration: none;
 }
-
+/* Remove extra top gap for ALL H2 headings in every page/section */
+h2 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+/* Fix anchor scroll position so the top bar does not overlap content */
+.section, .title {
+    scroll-margin-top: 30px;
+}
 </style>
 
 </head>
@@ -303,32 +312,39 @@ body {
     <div class="title" id="home">
 
         <style>
-           @keyframes rainbowText {
-    0%   { filter: hue-rotate(0deg); }
-    10%  { filter: hue-rotate(36deg); }
-    20%  { filter: hue-rotate(72deg); }
-    30%  { filter: hue-rotate(108deg); }
-    40%  { filter: hue-rotate(144deg); }
-    50%  { filter: hue-rotate(180deg); }
-    60%  { filter: hue-rotate(216deg); }
-    70%  { filter: hue-rotate(252deg); }
-    80%  { filter: hue-rotate(288deg); }
-    90%  { filter: hue-rotate(324deg); }
-    100% { filter: hue-rotate(360deg); }
-}
+            @keyframes rainbowText {
+                0%   { filter: hue-rotate(0deg); }
+                10%  { filter: hue-rotate(36deg); }
+                20%  { filter: hue-rotate(72deg); }
+                30%  { filter: hue-rotate(108deg); }
+                40%  { filter: hue-rotate(144deg); }
+                50%  { filter: hue-rotate(180deg); }
+                60%  { filter: hue-rotate(216deg); }
+                70%  { filter: hue-rotate(252deg); }
+                80%  { filter: hue-rotate(288deg); }
+                90%  { filter: hue-rotate(324deg); }
+                100% { filter: hue-rotate(360deg); }
+            }
 
+            /* Required for GitHub Pages to render gradient text properly */
+            .rainbow-title {
+                background: linear-gradient(to right, magenta, red, orange, yellow, green, cyan, blue, purple);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                display: inline-block;
+            }
         </style>
 
-        <h1 style="
+        <h1 class="rainbow-title" style="
             font-size: 70px;
-            font-weight: 900;
+            font-weight: 700;
             font-family: 'Arial Black', Gadget, sans-serif;
             text-align: center;
-            background: linear-gradient(to right, magenta, red, orange, yellow, green, cyan, blue, purple);
-            -webkit-background-clip: text;
-            color: transparent;
+
+            /* Removes default browser spacing for <h1> tags */
             margin: 0;
-            padding: 0;
+
             text-shadow:
                 3px 3px 0px #6a008a,
                 6px 6px 0px #5a0070,
@@ -342,8 +358,10 @@ body {
     </div>
 
 
+
     <div class="content-box">
         <img src="P99.jpeg" alt="Rahimul">
+
 
 
         <div>
@@ -825,6 +843,7 @@ body {
 
 </body>
 </html>
+
 
 
 
