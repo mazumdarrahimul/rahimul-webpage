@@ -827,14 +827,38 @@ h2 {
 
 
 
+<!-- SMALL BREAK BEFORE FOOTER -->
+<div style="
+    height:5px;
+    background-color:#444;   /* choose any color */
+"></div>
 
 
 
-	
+
+
 <!-- Your new footer starts here -->
 <footer class="footer-band">
   <div class="footer-content">
-    <p>© 2026 Rahimul Islam Mazumdar (Webpage inspired by Jasmine Jerry Aloor)</p>
+    <p>
+      © 2026 Rahimul Islam Mazumdar. All Rights Reserved.  
+      <br>Website inspired by Jasmine Jerry Aloor.
+      <br><span id="visitor-count" style="font-size:14px; opacity:0.9;"></span>
+    </p>
+
+<script>
+  // Simple visitor counter using localStorage
+  if (!localStorage.getItem('visitCount')) {
+      localStorage.setItem('visitCount', 1);
+  } else {
+      let count = parseInt(localStorage.getItem('visitCount')) + 1;
+      localStorage.setItem('visitCount', count);
+  }
+
+  document.getElementById("visitor-count").innerHTML =
+      "Visitor Count: " + localStorage.getItem('visitCount');
+</script>
+
 
     <div class="social-icons">
 
