@@ -314,23 +314,22 @@ h2 {
     <div class="title" id="home">
 
         <style>
-            @keyframes rainbowText {
+            /* Gentle moving hue but NO BLUR */
+            @keyframes rainbowShift {
                 0%   { filter: hue-rotate(0deg); }
-                10%  { filter: hue-rotate(36deg); }
-                20%  { filter: hue-rotate(72deg); }
-                30%  { filter: hue-rotate(108deg); }
-                40%  { filter: hue-rotate(144deg); }
-                50%  { filter: hue-rotate(180deg); }
-                60%  { filter: hue-rotate(216deg); }
-                70%  { filter: hue-rotate(252deg); }
-                80%  { filter: hue-rotate(288deg); }
-                90%  { filter: hue-rotate(324deg); }
                 100% { filter: hue-rotate(360deg); }
             }
 
-            /* Required for GitHub Pages to render gradient text properly */
             .rainbow-title {
-                background: linear-gradient(to right, magenta, red, orange, yellow, green, cyan, blue, purple);
+                background: linear-gradient(
+                    to right,
+                    #bfa34f,  /* muted gold */
+                    #62a06d,  /* soft green */
+                    #5dbdcc,  /* teal */
+                    #6b82d8,  /* soft blue */
+                    #9a6ccf,  /* lavender */
+                    #c67186   /* muted rose */
+                );
                 -webkit-background-clip: text;
                 background-clip: text;
                 color: transparent;
@@ -343,16 +342,13 @@ h2 {
             font-weight: 700;
             font-family: 'Arial Black', Gadget, sans-serif;
             text-align: center;
-
-            /* Removes default browser spacing for <h1> tags */
             margin: 0;
 
-            text-shadow:
-                3px 3px 0px #6a008a,
-                6px 6px 0px #5a0070,
-                9px 9px 0px #460056,
-                12px 12px 0px #32003d;
-            animation: rainbowText 4s linear infinite;
+            /* NO BLUR SHADOWS (sharp look) */
+            text-shadow: 0px 0px 0px transparent;
+
+            /* Gentle animation */
+            animation: rainbowShift 7s linear infinite;
         ">
             Welcome to My Homepage
         </h1>
@@ -895,6 +891,7 @@ h2 {
 
 </body>
 </html>
+
 
 
 
