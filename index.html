@@ -219,6 +219,35 @@ body {
     min-height: 100vh;
 }
 
+.study-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.study-column h3 {
+    font-family: 'Times New Roman', serif;
+    font-size: 22px;
+    color: #5b6ea6;
+    margin-bottom: 10px;
+}
+
+.study-column ul {
+    font-family: 'Times New Roman', serif;
+    font-size: 19px;
+    line-height: 1.8;
+    padding-left: 18px;
+}
+
+.study-column li {
+    margin-bottom: 8px;
+}
+@media (max-width: 900px) {
+    .study-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .title {
     text-align: center;
@@ -303,7 +332,8 @@ h2 {
     <a href="#awards">Awards</a>
     <a href="#contact">Contact</a>
     <a href="#gallery">Gallery</a> 
-	<a href="#academy">Mazumdar Academy</a>
+    <a href="#academy">Mazumdar Academy</a>
+    <a href="#study-material">Study Materials</a>
 	<!-- FIXED HERE -->
 </div>
 
@@ -817,7 +847,107 @@ h2 {
         <strong>Note:</strong> Its under content creation.
     </p>
 </div>
+
+
+<!-- STUDY MATERIAL -->
+<div class="section" id="study-material">
+    <h2>Study Material</h2>
+
+    <p style="
+        font-family:'Times New Roman', serif;
+        font-size:20px;
+        line-height:1.8;
+        margin-top:10px;
+    ">
+        This section contains study materials, lecture notes, and reference PDFs related to 
+        Physics, Artificial Intelligence & Machine Learning, Mathematics, and related research topics.
+        Visitors can download the materials for academic and learning purposes.
+    </p>
+
+    <!-- THREE COLUMN STUDY GRID -->
+    <div class="study-grid">
+
+        <!-- COLUMN 1 : PHYSICS -->
+        <div class="study-column">
+            <h3>Physics</h3>
+            <ul>
+                <li>
+                    <a href="pdfs/mechanics_notes.pdf" target="_blank" download>
+                        Mechanics Notes (PDF)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pdfs/electromagnetics_notes.pdf" target="_blank" download>
+                        Electromagnetics (PDF)
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 2 : AI-ML -->
+        <div class="study-column">
+            <h3>AI - Machine Learning</h3>
+            <ul>
+                <li>
+                    <a href="pdfs/machine_learning_notes.pdf" target="_blank" download>
+                        Machine Learning Notes (PDF)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pdfs/computer_vision_notes.pdf" target="_blank" download>
+                        Computer Vision Basics (PDF)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pdfs/deep_learning_notes.pdf" target="_blank" download>
+                        Deep Learning Fundamentals (PDF)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pdfs/distracted_driving_notes.pdf" target="_blank" download>
+                        Distracted Driving Detection – Study Notes (PDF)
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- COLUMN 3 : MATHEMATICS -->
+        <div class="study-column">
+            <h3>Mathematics</h3>
+            <ul>
+                <li>
+                    <a href="pdfs/linear_algebra_notes.pdf" target="_blank" download>
+                        Linear Algebra Notes (PDF)
+                    </a>
+                </li>
+
+                <li>
+                    <a href="pdfs/probability_statistics_notes.pdf" target="_blank" download>
+                        Probability & Statistics (PDF)
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
 </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -838,7 +968,7 @@ h2 {
   <div class="footer-content">
     <p>
       © 2026 Rahimul Islam Mazumdar. All Rights Reserved.  
-      <br>Website inspired by Jasmine Jerry Aloor.
+      
       <br><span id="visitor-count" style="font-size:14px; opacity:0.5;"></span>
     </p>
 
@@ -885,34 +1015,9 @@ h2 {
 
 </div>
 
-  </div>
+</div>
 </footer>
 <!-- Footer ends here -->
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
